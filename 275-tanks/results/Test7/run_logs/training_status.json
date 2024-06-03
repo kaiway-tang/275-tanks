@@ -1,0 +1,29 @@
+{
+    "TankAgent": {
+        "checkpoints": [
+            {
+                "steps": 120565,
+                "file_path": "results\\Test7\\TankAgent\\TankAgent-120565.onnx",
+                "reward": -13.900000542402267,
+                "creation_time": 1717324150.631132,
+                "auxillary_file_paths": [
+                    "results\\Test7\\TankAgent\\TankAgent-120565.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 120565,
+            "file_path": "results\\Test7\\TankAgent.onnx",
+            "reward": -13.900000542402267,
+            "creation_time": 1717324150.631132,
+            "auxillary_file_paths": [
+                "results\\Test7\\TankAgent\\TankAgent-120565.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}
