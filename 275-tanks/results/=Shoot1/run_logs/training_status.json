@@ -1,0 +1,51 @@
+{
+    "ShootAgent": {
+        "checkpoints": [
+            {
+                "steps": 22080,
+                "file_path": "results\\=Shoot1\\ShootAgent\\ShootAgent-22080.onnx",
+                "reward": null,
+                "creation_time": 1717451615.900418,
+                "auxillary_file_paths": [
+                    "results\\=Shoot1\\ShootAgent\\ShootAgent-22080.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 22080,
+            "file_path": "results\\=Shoot1\\ShootAgent.onnx",
+            "reward": null,
+            "creation_time": 1717451615.900418,
+            "auxillary_file_paths": [
+                "results\\=Shoot1\\ShootAgent\\ShootAgent-22080.pt"
+            ]
+        }
+    },
+    "RotateAgent": {
+        "checkpoints": [
+            {
+                "steps": 23040,
+                "file_path": "results\\=Shoot1\\RotateAgent\\RotateAgent-23040.onnx",
+                "reward": null,
+                "creation_time": 1717451615.9411526,
+                "auxillary_file_paths": [
+                    "results\\=Shoot1\\RotateAgent\\RotateAgent-23040.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 23040,
+            "file_path": "results\\=Shoot1\\RotateAgent.onnx",
+            "reward": null,
+            "creation_time": 1717451615.9411526,
+            "auxillary_file_paths": [
+                "results\\=Shoot1\\RotateAgent\\RotateAgent-23040.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}

@@ -64,11 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AgentMoveToTarget.cs" />
-    <Compile Include="Assets\Scripts\TankAgent.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Tank.cs" />
     <Compile Include="Assets\Projectile.cs" />
+    <Compile Include="Assets\Scripts\ShootAgent.cs" />
     <Compile Include="Assets\MouseObj.cs" />
+    <Compile Include="Assets\Scripts\RotateAgent.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -3,12 +3,14 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    private TankAgent tankAgent;
+    private ShootAgent tankAgent;
 
-    public void SetAgent(TankAgent agent) {
+    public void SetAgent(ShootAgent agent) {
         tankAgent = agent;
     }
+
     private void OnTriggerEnter(Collider other) {
+        tankAgent.projectileDestroyed(); // Notify the agent that the projectile was destroyed
         if (other.CompareTag("Target")) {
             tankAgent.RegisterHit(); // Notify the agent of a hit
             Destroy(gameObject); // Destroy the projectile
