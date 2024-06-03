@@ -2,44 +2,31 @@
     "ShootAgent": {
         "checkpoints": [
             {
-                "steps": 22080,
-                "file_path": "results\\=Shoot1\\ShootAgent\\ShootAgent-22080.onnx",
-                "reward": null,
-                "creation_time": 1717451615.900418,
+                "steps": 499972,
+                "file_path": "results\\=Shoot1\\ShootAgent\\ShootAgent-499972.onnx",
+                "reward": -0.05263157894736842,
+                "creation_time": 1717452729.3758233,
                 "auxillary_file_paths": [
-                    "results\\=Shoot1\\ShootAgent\\ShootAgent-22080.pt"
+                    "results\\=Shoot1\\ShootAgent\\ShootAgent-499972.pt"
                 ]
-            }
-        ],
-        "final_checkpoint": {
-            "steps": 22080,
-            "file_path": "results\\=Shoot1\\ShootAgent.onnx",
-            "reward": null,
-            "creation_time": 1717451615.900418,
-            "auxillary_file_paths": [
-                "results\\=Shoot1\\ShootAgent\\ShootAgent-22080.pt"
-            ]
-        }
-    },
-    "RotateAgent": {
-        "checkpoints": [
+            },
             {
-                "steps": 23040,
-                "file_path": "results\\=Shoot1\\RotateAgent\\RotateAgent-23040.onnx",
-                "reward": null,
-                "creation_time": 1717451615.9411526,
+                "steps": 500080,
+                "file_path": "results\\=Shoot1\\ShootAgent\\ShootAgent-500080.onnx",
+                "reward": 0.13333333333333333,
+                "creation_time": 1717452729.400522,
                 "auxillary_file_paths": [
-                    "results\\=Shoot1\\RotateAgent\\RotateAgent-23040.pt"
+                    "results\\=Shoot1\\ShootAgent\\ShootAgent-500080.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 23040,
-            "file_path": "results\\=Shoot1\\RotateAgent.onnx",
-            "reward": null,
-            "creation_time": 1717451615.9411526,
+            "steps": 500080,
+            "file_path": "results\\=Shoot1\\ShootAgent.onnx",
+            "reward": 0.13333333333333333,
+            "creation_time": 1717452729.400522,
             "auxillary_file_paths": [
-                "results\\=Shoot1\\RotateAgent\\RotateAgent-23040.pt"
+                "results\\=Shoot1\\ShootAgent\\ShootAgent-500080.pt"
             ]
         }
     },

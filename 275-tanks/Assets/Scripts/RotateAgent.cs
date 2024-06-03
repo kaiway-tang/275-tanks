@@ -26,13 +26,13 @@ public class RotateAgent : Agent
         // Reset the tank's rotation and the target's position
         agent.rotation = Quaternion.identity;
         
-        // Move the agent to a random position
+        // // Move the agent to a random position
         // agent.localPosition = new Vector3(Random.Range(-4f, 4f), 0, Random.Range(-4f, 4f));
 
-        // Move the target to a random position
+        // // Move the target to a random position
         // target.localPosition = new Vector3(Random.Range(-4f, 4f), 0f, Random.Range(-4f, 4f));
 
-        // Make sure target is not too close to the agent
+        // // Make sure target is not too close to the agent
         // while (Vector3.Distance(agent.localPosition, target.localPosition) < 2f) {
         //     target.localPosition = new Vector3(Random.Range(-4f, 4f), 0f, Random.Range(-4f, 4f));
         // }
@@ -73,7 +73,7 @@ public class RotateAgent : Agent
         SetReward(-angleDiff / 180f * 0.1f); // Penalize based on how off the angle is, scaled to [-1, 0]
 
         // Give a small positive reward for good alignment
-        if (angleDiff < 10f) {
+        if (angleDiff < 5f) {
             SetReward(0.1f);
             floorRenderer.material.color = Color.green;
         } else {

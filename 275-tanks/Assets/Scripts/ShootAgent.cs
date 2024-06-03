@@ -38,10 +38,9 @@ public class ShootAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor) {
         // Add the relative position of the target as observations
-        sensor.AddObservation(barrelTransform.right);
         Vector3 targetLocal = new Vector3(target.localPosition.x, 0, target.localPosition.z);
         Vector3 transformLocal = new Vector3(agent.localPosition.x, 0, agent.localPosition.z);
-        sensor.AddObservation((targetLocal - transformLocal).normalized);
+        sensor.AddObservation(Vector3.Dot(barrelTransform.right, (targetLocal - transformLocal).normalized));
     }
 
     public override void Heuristic(in ActionBuffers actionsOut) {
@@ -98,14 +97,25 @@ public class ShootAgent : Agent
     public void RegisterHit() {
         SetReward(1f);
         floorRenderer.material.color = Color.green;
+        MoveTarget();
     }
 
     public void RegisterMiss() {
-        SetReward(-1f);
+        SetReward(-2f);
         floorRenderer.material.color = Color.red;
     }
 
     public void LosePoints() {
         SetReward(-0.01f);
+    }
+
+    private void MoveTarget() {
+        // Move the target to a random position
+        target.localPosition = new Vector3(Random.Range(-4f, 4f), 0f, Random.Range(-4f, 4f));
+
+        // Make sure target is not too close to the agent
+        while (Vector3.Distance(agent.localPosition, target.localPosition) < 2f) {
+            target.localPosition = new Vector3(Random.Range(-4f, 4f), 0f, Random.Range(-4f, 4f));
+        }
     }
 }

@@ -1,0 +1,29 @@
+{
+    "ShootAgent": {
+        "checkpoints": [
+            {
+                "steps": 98080,
+                "file_path": "results\\=Shoot2\\ShootAgent\\ShootAgent-98080.onnx",
+                "reward": 3.15,
+                "creation_time": 1717454033.1164398,
+                "auxillary_file_paths": [
+                    "results\\=Shoot2\\ShootAgent\\ShootAgent-98080.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 98080,
+            "file_path": "results\\=Shoot2\\ShootAgent.onnx",
+            "reward": 3.15,
+            "creation_time": 1717454033.1164398,
+            "auxillary_file_paths": [
+                "results\\=Shoot2\\ShootAgent\\ShootAgent-98080.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}

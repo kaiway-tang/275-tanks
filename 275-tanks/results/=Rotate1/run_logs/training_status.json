@@ -1,0 +1,47 @@
+{
+    "RotateAgent": {
+        "checkpoints": [
+            {
+                "steps": 499980,
+                "file_path": "results\\=Rotate1\\RotateAgent\\RotateAgent-499980.onnx",
+                "reward": 2.572263148062083,
+                "creation_time": 1717453360.2097528,
+                "auxillary_file_paths": [
+                    "results\\=Rotate1\\RotateAgent\\RotateAgent-499980.pt"
+                ]
+            },
+            {
+                "steps": 999980,
+                "file_path": "results\\=Rotate1\\RotateAgent\\RotateAgent-999980.onnx",
+                "reward": 2.990299757682916,
+                "creation_time": 1717453583.8990946,
+                "auxillary_file_paths": [
+                    "results\\=Rotate1\\RotateAgent\\RotateAgent-999980.pt"
+                ]
+            },
+            {
+                "steps": 1000080,
+                "file_path": "results\\=Rotate1\\RotateAgent\\RotateAgent-1000080.onnx",
+                "reward": 2.981576582789421,
+                "creation_time": 1717453583.9332325,
+                "auxillary_file_paths": [
+                    "results\\=Rotate1\\RotateAgent\\RotateAgent-1000080.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000080,
+            "file_path": "results\\=Rotate1\\RotateAgent.onnx",
+            "reward": 2.981576582789421,
+            "creation_time": 1717453583.9332325,
+            "auxillary_file_paths": [
+                "results\\=Rotate1\\RotateAgent\\RotateAgent-1000080.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}
