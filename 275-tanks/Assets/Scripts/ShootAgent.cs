@@ -16,6 +16,7 @@ public class ShootAgent : Agent
     private bool canShoot = true;
 
     private bool projectileExists = false;
+    private Projectile projectile;
 
     public override void OnEpisodeBegin() {
         // Reset the target's position
@@ -68,16 +69,22 @@ public class ShootAgent : Agent
 
     private void Shoot() {
         // Instantiate and shoot the projectile
-        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        GameObject projectileGO = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+        Rigidbody rb = projectileGO.GetComponent<Rigidbody>();
         rb.velocity = projectileSpawnPoint.right * 10f; // Adjust the speed as needed
         projectileExists = true;
 
+        projectile = projectileGO.GetComponent<Projectile>();
+
         // Set the agent as the projectile's agent
-        projectile.GetComponent<Projectile>().SetAgent(this);
+        projectile.SetAgent(this);
 
         // Destroy the projectile after a few seconds
-        Destroy(projectile, 4f);
+        Destroy(projectileGO, 4f);
+    }
+
+    public Projectile GetProjectile() {
+        return projectile;
     }
 
     public void projectileDestroyed() {

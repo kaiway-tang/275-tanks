@@ -67,6 +67,7 @@
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Tank.cs" />
     <Compile Include="Assets\Projectile.cs" />
+    <Compile Include="Assets\Scripts\MoveAgent.cs" />
     <Compile Include="Assets\Scripts\ShootAgent.cs" />
     <Compile Include="Assets\MouseObj.cs" />
     <Compile Include="Assets\Scripts\RotateAgent.cs" />

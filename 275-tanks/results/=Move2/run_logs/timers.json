@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1717459219",
+        "python_version": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\wangh\\OneDrive\\Desktop\\Projects\\275-tanks\\275-tanks\\venv\\Scripts\\mlagents-learn configuration.yaml --run-id==Move2",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.3.0+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1717459227"
+    },
+    "total": 8.5608852,
+    "count": 1,
+    "self": 0.005943000000000254,
+    "children": {
+        "run_training.setup": {
+            "total": 0.05156359999999993,
+            "count": 1,
+            "self": 0.05156359999999993
+        },
+        "TrainerController.start_learning": {
+            "total": 8.5033786,
+            "count": 1,
+            "self": 0.000520299999999807,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 8.5028469,
+                    "count": 1,
+                    "self": 8.5028469
+                },
+                "trainer_threads": {
+                    "total": 4.999999987376214e-07,
+                    "count": 1,
+                    "self": 4.999999987376214e-07
+                },
+                "TrainerController._save_models": {
+                    "total": 1.0900000001257126e-05,
+                    "count": 1,
+                    "self": 1.0900000001257126e-05
+                }
+            }
+        }
+    }
+}

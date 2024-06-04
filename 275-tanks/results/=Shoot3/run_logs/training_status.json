@@ -1,0 +1,38 @@
+{
+    "ShootAgent": {
+        "checkpoints": [
+            {
+                "steps": 499972,
+                "file_path": "results\\=Shoot3\\ShootAgent\\ShootAgent-499972.onnx",
+                "reward": 2.912280701754386,
+                "creation_time": 1717454449.2175064,
+                "auxillary_file_paths": [
+                    "results\\=Shoot3\\ShootAgent\\ShootAgent-499972.pt"
+                ]
+            },
+            {
+                "steps": 500080,
+                "file_path": "results\\=Shoot3\\ShootAgent\\ShootAgent-500080.onnx",
+                "reward": 2.9166666666666665,
+                "creation_time": 1717454449.2435076,
+                "auxillary_file_paths": [
+                    "results\\=Shoot3\\ShootAgent\\ShootAgent-500080.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500080,
+            "file_path": "results\\=Shoot3\\ShootAgent.onnx",
+            "reward": 2.9166666666666665,
+            "creation_time": 1717454449.2435076,
+            "auxillary_file_paths": [
+                "results\\=Shoot3\\ShootAgent\\ShootAgent-500080.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}
