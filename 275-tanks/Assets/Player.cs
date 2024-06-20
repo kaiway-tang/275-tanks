@@ -8,20 +8,35 @@ public class Player : Tank
     [SerializeField] Camera cam;
     [SerializeField] Transform crosshair;
 
+    [SerializeField] Transform predictedPositionIndicator;
+
+    public static Transform trfm;
+    public static Player self;
+    public PositionTracker tracker;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        self = GetComponent<Player>();        
+        trfm = transform;
     }
 
     // Update is called once per frame
     void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
     }
 
-    private void FixedUpdate()
+    private new void FixedUpdate()
     {
+        base.FixedUpdate();
+        
+
         Aim(crosshair.position);
 
         if (Input.GetKey(KeyCode.W))
@@ -44,5 +59,10 @@ public class Player : Tank
         {
             Steer(steerSpeed);
         }
+    }
+
+    public static Vector3 PredictedPosition(float time)
+    {
+        return self.tracker.PredictedPosition(time);
     }
 }

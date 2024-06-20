@@ -14,6 +14,8 @@ public class MoveAgent : Agent
     [SerializeField] private float moveSpeed = 5f;
     private Rigidbody rb;
 
+    GameObject trackedBullet;
+
     public override void Initialize()
     {
         rb = agent.GetComponent<Rigidbody>();
@@ -64,6 +66,11 @@ public class MoveAgent : Agent
         }
     }
 
+    public void SetTrackedBullet(GameObject newBullet)
+    {
+        trackedBullet = newBullet;
+    }
+
     public override void OnActionReceived(ActionBuffers actions)
     {
         // Get the action values
@@ -89,10 +96,10 @@ public class MoveAgent : Agent
         }
 
         // Check for bullet dodging
-        Projectile targetProjectile = TargetAgent.GetProjectile();
-        if (targetProjectile != null)
+        //Projectile targetProjectile = TargetAgent.GetProjectile();
+        if (trackedBullet != null)
         {
-            float distanceToBullet = Vector3.Distance(agent.localPosition, targetProjectile.transform.localPosition);
+            float distanceToBullet = Vector3.Distance(agent.localPosition, trackedBullet.transform.position);
             if (distanceToBullet < 0.5f) // Arbitrary close distance, adjust as necessary
             {
                 AddReward(-5.0f); // Penalty for being hit or close to the bullet
