@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tree1 : LSystem
+public class Tree3 : LSystem
 {
     [SerializeField] bool manualStep;
     [SerializeField] Vector3 bottom, half, top;
@@ -17,6 +17,17 @@ public class Tree1 : LSystem
         {
             scaleRate = transform.localScale / maxDepth;
         }
+    }
+
+    public override void Init(int _depth, Transform _parent, Vector3 _scaleRate)
+    {
+        depth = _depth;
+        parent = _parent;
+        scaleRate.x = _scaleRate.x * 7f;
+        scaleRate.y = _scaleRate.y * Random.Range(25f,45f);
+        scaleRate.z = _scaleRate.z * 7f;
+
+        transform.localScale = scaleRate;
     }
 
     private void Update()
@@ -46,23 +57,28 @@ public class Tree1 : LSystem
 
         if (depth < maxDepth)
         {
+            
             GameObject primary = Instantiate(obj, top, Quaternion.identity);
-            primary.GetComponent<LSystem>().Init(depth + 4, transform, scaleRate);
+            primary.transform.localScale = transform.localScale * 0.9f;
+            //primary.GetComponent<LSystem>().Init(depth + 1, null, scaleRate);
+            primary.GetComponent<Tree3>().depth = depth + 1;
             primary.transform.position += primary.transform.up * primary.transform.localScale.y;
+            
 
-            while (attempts < 30)
+            int angle = 0;
+
+            while (angle < 360)
             {
-                if (Random.Range(0, 10) == 0)
+                angle += Random.Range(7, 14);
+                if (Random.Range(0, 2) == 0)
                 {
-                    GameObject branch = Instantiate(obj, top, Quaternion.identity);
-                    branch.GetComponent<LSystem>().Init(depth + 1, transform, scaleRate);
-                    branch.transform.Rotate(Vector3.up * Random.Range(0,360));
-                    branch.transform.Rotate(Vector3.forward * Random.Range(60, 80));
+                    GameObject branch = Instantiate(obj, top + new Vector3(0,1,0)* Random.Range(-0.5f,0.5f) * transform.localScale.y, Quaternion.identity);
+                    branch.GetComponent<LSystem>().Init(depth + 99, transform, scaleRate);
+                    branch.transform.Rotate(Vector3.up * angle);
+                    branch.transform.Rotate(Vector3.forward * Random.Range(75,105));
                     branch.transform.position += branch.transform.up * (branch.transform.localScale.y * .8f);
-                    attempts += 10;
+                    //attempts += 4;
                 }
-
-                attempts++;
             }
         }
     }

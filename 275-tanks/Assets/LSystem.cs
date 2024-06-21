@@ -11,13 +11,10 @@ public class LSystem : MonoBehaviour
     // Start is called before the first frame update
     protected void Start()
     {
-        if (!parent)
-        {
-            scaleRate = transform.localScale / maxDepth;
-        }
+        
     }
 
-    public void Init(int _depth, Transform _parent, Vector3 _scaleRate)
+    public virtual void Init(int _depth, Transform _parent, Vector3 _scaleRate)
     {
         depth = _depth;
         parent = _parent;

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169272885984715360, guid: 920a5eec698ec3d439646516b3fd7452, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 472f2066ada157b4f8f9645759d77884, type: 2}
     - target: {fileID: 195310827428765632, guid: 920a5eec698ec3d439646516b3fd7452, type: 3}
       propertyPath: trfm
       value: 
@@ -20,6 +24,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5143069215920425359, guid: 920a5eec698ec3d439646516b3fd7452, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 472f2066ada157b4f8f9645759d77884, type: 2}
+    - target: {fileID: 5500267718231107221, guid: 920a5eec698ec3d439646516b3fd7452, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 472f2066ada157b4f8f9645759d77884, type: 2}
+    - target: {fileID: 6246592352947645576, guid: 920a5eec698ec3d439646516b3fd7452, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 472f2066ada157b4f8f9645759d77884, type: 2}
     - target: {fileID: 6848328171021619268, guid: 920a5eec698ec3d439646516b3fd7452, type: 3}
       propertyPath: m_Name
       value: Player_Tank
