@@ -1,0 +1,29 @@
+{
+    "MoveAgent": {
+        "checkpoints": [
+            {
+                "steps": 133447,
+                "file_path": "results/Real4/MoveAgent/MoveAgent-133447.onnx",
+                "reward": null,
+                "creation_time": 1718924672.357001,
+                "auxillary_file_paths": [
+                    "results/Real4/MoveAgent/MoveAgent-133447.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 133447,
+            "file_path": "results/Real4/MoveAgent.onnx",
+            "reward": null,
+            "creation_time": 1718924672.357001,
+            "auxillary_file_paths": [
+                "results/Real4/MoveAgent/MoveAgent-133447.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.11.0"
+    }
+}

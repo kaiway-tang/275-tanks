@@ -75,9 +75,9 @@ public class RotateAgent : Agent
         // Give a small positive reward for good alignment
         if (angleDiff < 5f) {
             SetReward(0.1f);
-            floorRenderer.material.color = Color.green;
+            //floorRenderer.material.color = Color.green;
         } else {
-            floorRenderer.material.color = Color.white;
+            //floorRenderer.material.color = Color.white;
         }
     }
 

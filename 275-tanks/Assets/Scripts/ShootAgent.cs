@@ -34,7 +34,7 @@ public class ShootAgent : Agent
         lastShotTime = Time.time;
         canShoot = true;
 
-        StartCoroutine(EndPractice());
+        //StartCoroutine(EndPractice());
     }
 
     public override void CollectObservations(VectorSensor sensor) {
@@ -60,7 +60,7 @@ public class ShootAgent : Agent
             StartCoroutine(ResetShootCooldown());
         }
 
-        Debug.Log(GetCumulativeReward());
+        //Debug.Log(GetCumulativeReward());
 
         if(!projectileExists) {
             // LosePoints();
@@ -71,7 +71,7 @@ public class ShootAgent : Agent
         // Instantiate and shoot the projectile
         GameObject projectileGO = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
         Rigidbody rb = projectileGO.GetComponent<Rigidbody>();
-        rb.velocity = projectileSpawnPoint.right * 10f; // Adjust the speed as needed
+        rb.velocity = projectileSpawnPoint.right * 15f; // Adjust the speed as needed
         projectileExists = true;
 
         projectile = projectileGO.GetComponent<Projectile>();
@@ -103,13 +103,13 @@ public class ShootAgent : Agent
 
     public void RegisterHit() {
         SetReward(1f);
-        floorRenderer.material.color = Color.green;
+        //floorRenderer.material.color = Color.green;
         MoveTarget();
     }
 
     public void RegisterMiss() {
         SetReward(-2f);
-        floorRenderer.material.color = Color.red;
+        //floorRenderer.material.color = Color.red;
     }
 
     public void LosePoints() {
